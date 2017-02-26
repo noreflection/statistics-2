@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Statistics.Models;
 
 namespace Statistics.Controllers
 {
@@ -11,6 +12,16 @@ namespace Statistics.Controllers
         public IActionResult Index()
         {
             return View();
+        }
+
+        public IActionResult Main()
+        {
+            return View();
+        }
+
+        public IActionResult Saved(Item item)
+        {
+            return View(item);
         }
 
         public IActionResult About()

@@ -1,0 +1,29 @@
+﻿@model Statistics.Models.Item
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+
+<h2>Add item</h2>
+
+<div class="form-group">
+    <label class="control-label" for="form-group-input">Item name</label>
+    @*<input type="text" class="form-control" id="nameTextBox" placeholder="Name">*@
+    @Html.TextBoxFor(x => x.ItemName, new { @class = "form-control" })
+
+    @*<label class="control-label" for="form-group-input">Item description</label>
+    <input type="text" class="form-control" id="descriptionTextBox" placeholder="Name">*@
+    
+</div>
+
+
+@*<button type="button" class="btn btn-secondary">Save</button>*@
+<div type="submit" class="btn btn-success">
+    Save
+    @*@Html.ActionLink("Save","Saved")*@
+    @ViewBag.ItemName
+    
+</div>
+@*@ViewBag.ItemName*@
+
