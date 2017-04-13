@@ -1,9 +1,0 @@
-C:\Users\rootuser\Documents\Repositories\Statistics\Statistics\bin\Release\netcoreapp1.0\Statistics.deps.json
-C:\Users\rootuser\Documents\Repositories\Statistics\Statistics\bin\Release\netcoreapp1.0\Statistics.runtimeconfig.json
-C:\Users\rootuser\Documents\Repositories\Statistics\Statistics\bin\Release\netcoreapp1.0\Statistics.runtimeconfig.dev.json
-C:\Users\rootuser\Documents\Repositories\Statistics\Statistics\bin\Release\netcoreapp1.0\Statistics.dll
-C:\Users\rootuser\Documents\Repositories\Statistics\Statistics\bin\Release\netcoreapp1.0\Statistics.pdb
-C:\Users\rootuser\Documents\Repositories\Statistics\Statistics\obj\Release\netcoreapp1.0\Statistics.csprojResolveAssemblyReference.cache
-C:\Users\rootuser\Documents\Repositories\Statistics\Statistics\obj\Release\netcoreapp1.0\Statistics.AssemblyInfo.cs
-C:\Users\rootuser\Documents\Repositories\Statistics\Statistics\obj\Release\netcoreapp1.0\Statistics.dll
-C:\Users\rootuser\Documents\Repositories\Statistics\Statistics\obj\Release\netcoreapp1.0\Statistics.pdb
