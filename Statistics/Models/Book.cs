@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Statistics.Models
 {
-    public class Item
+    public class Book
     {
         [Required(ErrorMessage = "Add item name")]
         public string ItemName { get; set; }

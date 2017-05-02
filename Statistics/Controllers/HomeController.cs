@@ -16,10 +16,13 @@ namespace Statistics.Controllers
 
         public IActionResult Main()
         {
+            //add test items
+
+
             return View();
         }
 
-        public IActionResult Saved(Item item)
+        public IActionResult Saved(Book item)
         {
             return View(item);
         }
