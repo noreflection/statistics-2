@@ -4,9 +4,12 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Statistics.Models;
+using Statistics.Models.Concrete;
 
 namespace Statistics
 {
@@ -27,6 +30,13 @@ namespace Statistics
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            // db
+            services.AddDbContext<ApplicationDbContext>(options =>
+                options.UseSqlServer(
+                    Configuration["Data:Statistics:ConnectionString"]));
+
+            services.AddTransient<IBookRepository, BookRepository>();
+
             // Add framework services.
             services.AddMvc();
         }
@@ -55,6 +65,8 @@ namespace Statistics
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
+
+            SeedData.EnsurePoppulated(app);
         }
     }
 }
