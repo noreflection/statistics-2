@@ -16,8 +16,8 @@ namespace Statistics.Models
             if (!context.Books.Any())
             {
                 context.Books.AddRange(
-                    new Book { ItemName = "testBook1Name", ItemDescription = "testBook1Description" },
-                    new Book { ItemName = "testBook2Name", ItemDescription = "testBook2Description" }
+                    new Book { Name = "testBook1Name", Description = "testBook1Description" },
+                    new Book { Name = "testBook2Name", Description = "testBook2Description" }
                 );
                 context.SaveChanges();
             }

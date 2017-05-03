@@ -8,10 +8,19 @@ namespace Statistics.Models
 {
     public class Book
     {
-        [Required(ErrorMessage = "Add item name")]
-        public string ItemName { get; set; }
+        [Key]
+        public int Id { get; set; }
 
-        [Required(ErrorMessage = "Add item description")]
-        public string ItemDescription { get; set; }
+        //[Required(ErrorMessage = "Add item name")]
+        public string Name { get; set; }
+
+        //todo: bound chapter table
+        public string Chapter1 { get; set; }
+
+        public string Chapter2 { get; set; }
+
+        //[Required(ErrorMessage = "Add item description")]
+        public string Description { get; set; }
+
     }
 }

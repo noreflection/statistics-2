@@ -16,5 +16,24 @@ namespace Statistics.Models.Concrete
         }
 
         public IEnumerable<Book> Books => context.Books;
+
+        public void SaveBook(Book book)
+        {
+            if (book.Id == 0)
+            {
+                context.Books.Add(book);
+            }
+            else
+            {
+                Book dbEntry = context.Books.FirstOrDefault(b => b.Id == book.Id);
+
+                if (dbEntry != null)
+                {
+                    dbEntry.Name = book.Name;
+                    dbEntry.Description = book.Description;
+                }
+            }
+            context.SaveChanges();
+        }
     }
 }
