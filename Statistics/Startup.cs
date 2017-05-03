@@ -9,6 +9,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Statistics.Models;
+using Statistics.Models.Abstract;
 using Statistics.Models.Concrete;
 
 namespace Statistics
@@ -37,6 +38,7 @@ namespace Statistics
 
             services.AddTransient<IBookRepository, BookRepository>();
             services.AddTransient<IProjectRepository, ProjectRepository>();
+            services.AddTransient<IAuthorRepository, AuthorRepository>();
 
             // Add framework services.
             services.AddMvc();

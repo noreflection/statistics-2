@@ -19,6 +19,10 @@ namespace Statistics.Models
                     new Book { Name = "testBook1Name", Description = "testBook1Description" },
                     new Book { Name = "testBook2Name", Description = "testBook2Description" }
                 );
+                context.Authors.AddRange(
+                    new Author { AuthorName = "Adam Freeman" },
+                    new Author { AuthorName = "Dino Esposito" }
+                );
                 context.SaveChanges();
             }
         }

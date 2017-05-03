@@ -5,22 +5,18 @@
 }
 <h2>Add Book</h2>
 <form asp-action="EditBook" method="post">
-    <input type="hidden" asp-for="Id">
+    <input type="hidden" asp-for="BookId">
     
     <div class="form-group">
         <label asp-for="Name">Book Name</label>
         <input asp-for="Name" class="form-control">
     </div>
     
-    <div class="form-group">
-        <label asp-for="Chapter1">Chapter One</label><br>
-        <input asp-for="Chapter1" class="form-control">
-    </div>
+    @*<div class="form-group">
+        <label asp-for="Chapters">Chapter One</label><br>
+        <input asp-for="Chapters" asp-action="AddChapter" class="form-control">
+    </div>*@
     
-    <div class="form-group">
-        <label asp-for="Chapter2">Chapter Two</label><br>
-        <input asp-for="Chapter2" class="form-control">
-    </div>
 
     <div class="form-group">
         <label asp-for="Description">Description</label><br>
@@ -28,7 +24,7 @@
     </div>
     
     <div class="text-left">
-        <button class="btn btn-primary" type="submit">Save</button>
-        <a asp-action="ViewBooksList" class="btn btn-default">Cancell</a>
+        <button asp-action="EditBook" class="btn btn-primary" type="submit">Save Book</button>
+        <a asp-action="ViewBooksList" class="btn btn-default">Cancel</a>
     </div>
 </form>

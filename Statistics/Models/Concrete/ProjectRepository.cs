@@ -19,7 +19,7 @@ namespace Statistics.Models.Concrete
 
         public void SaveProject(Project project)
         {
-            context.Projects.Add(new Project{Name = project.Name});
+            context.Projects.Add(new Project { Name = project.Name });
             context.SaveChanges();
         }
 

@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Statistics.Models;
 using Statistics.Models.Concrete;
+using Statistics.Models.ViewModels;
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -38,6 +39,16 @@ namespace Statistics.Controllers
             return View(book);
         }
 
+
         public IActionResult AddBook(string name, string desc) => View("EditBook", new Book());
+
+        public IActionResult AddBookTest(Book book)
+        {
+            AddBookViewModel addBookVm = new AddBookViewModel { Book = book };
+
+            return View(addBookVm);
+        }
+
+
     }
 }
