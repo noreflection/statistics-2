@@ -7,17 +7,15 @@ using System.Threading.Tasks;
 
 namespace Statistics.Models
 {
-    [Table("Books")]
-    public class Book
+    [Table("Chapters")]
+    public class Chapter
     {
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Computed)]
-        public int BookId { get; set; }
+        public int ChapterId { get; set; }
 
-        public string Name { get; set; }
-
-        public string Description { get; set; }
-
-        // chapter navigation property
-        public ICollection<Chapter> Chapters { get; set; }
+        public string ChapterName { get; set; }
+        
+        public int ChapterStartPage { get; set; }
+        public int ChapterEndPage { get; set; }
     }
 }

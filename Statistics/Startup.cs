@@ -36,6 +36,7 @@ namespace Statistics
                     Configuration["Data:Statistics:ConnectionString"]));
 
             services.AddTransient<IBookRepository, BookRepository>();
+            services.AddTransient<IProjectRepository, ProjectRepository>();
 
             // Add framework services.
             services.AddMvc();

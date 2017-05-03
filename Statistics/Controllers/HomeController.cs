@@ -16,9 +16,6 @@ namespace Statistics.Controllers
 
         public IActionResult Main()
         {
-            //add test items
-
-
             return View();
         }
 

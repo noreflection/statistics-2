@@ -32,7 +32,7 @@ namespace Statistics.Controllers
                 //todo: configure session here
                 //TempData["message"] = $"{book.Name} has been saved";
 
-                return RedirectToAction("Index");
+                return RedirectToAction("ViewBooksList");
             }
 
             return View(book);

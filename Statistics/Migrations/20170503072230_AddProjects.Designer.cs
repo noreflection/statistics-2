@@ -8,9 +8,10 @@ using Statistics.Models;
 namespace Statistics.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20170503072230_AddProjects")]
+    partial class AddProjects
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "1.1.1")
@@ -29,36 +30,21 @@ namespace Statistics.Migrations
 
                     b.Property<string>("Name");
 
-                    b.Property<int?>("ProjectId");
-
                     b.HasKey("Id");
-
-                    b.HasIndex("ProjectId");
 
                     b.ToTable("Books");
                 });
 
             modelBuilder.Entity("Statistics.Models.Project", b =>
                 {
-                    b.Property<int>("ProjectId")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
-
-                    b.Property<DateTime>("EndDate");
 
                     b.Property<string>("Name");
 
-                    b.Property<DateTime>("StartDate");
-
-                    b.HasKey("ProjectId");
+                    b.HasKey("Id");
 
                     b.ToTable("Projects");
-                });
-
-            modelBuilder.Entity("Statistics.Models.Book", b =>
-                {
-                    b.HasOne("Statistics.Models.Project")
-                        .WithMany("Books")
-                        .HasForeignKey("ProjectId");
                 });
         }
     }

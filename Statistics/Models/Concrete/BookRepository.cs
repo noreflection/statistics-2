@@ -9,7 +9,7 @@ namespace Statistics.Models.Concrete
     public class BookRepository : IBookRepository
     {
         private ApplicationDbContext context { get; }
-
+        
         public BookRepository(ApplicationDbContext context)
         {
             this.context = context;

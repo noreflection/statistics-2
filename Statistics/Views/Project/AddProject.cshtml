@@ -1,0 +1,21 @@
+﻿@model Statistics.Models.Project
+
+@{
+    ViewBag.Title = "Add Project";
+    Layout = "_Layout";
+}
+
+<h2>Add New Project</h2>
+<form asp-action="AddProject" method="post">
+    <input type="hidden" asp-for="Id">
+    
+    <div class="form-group">
+        <label asp-for="Name">Project Name</label>
+        <input asp-for="Name" class="form-control">
+    </div>
+    
+    <div class="text-left">
+        <button class="btn btn-primary" type="submit">Save Project</button>
+        <a asp-action="Index" class="btn btn-default">Cancel</a>
+    </div>
+</form>
