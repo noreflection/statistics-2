@@ -10,7 +10,7 @@ namespace Statistics.Models
     [Table("Books")]
     public class Book
     {
-        [Key, DatabaseGenerated(DatabaseGeneratedOption.Computed)]
+        [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int BookId { get; set; }
 
         public string Name { get; set; }

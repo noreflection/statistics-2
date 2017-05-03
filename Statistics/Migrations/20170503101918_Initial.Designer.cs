@@ -8,8 +8,8 @@ using Statistics.Models;
 namespace Statistics.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20170503093116_AddColumnsToProjects")]
-    partial class AddColumnsToProjects
+    [Migration("20170503101918_Initial")]
+    partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -19,12 +19,8 @@ namespace Statistics.Migrations
 
             modelBuilder.Entity("Statistics.Models.Book", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("BookId")
                         .ValueGeneratedOnAdd();
-
-                    b.Property<string>("Chapter1");
-
-                    b.Property<string>("Chapter2");
 
                     b.Property<string>("Description");
 
@@ -32,11 +28,31 @@ namespace Statistics.Migrations
 
                     b.Property<int?>("ProjectId");
 
-                    b.HasKey("Id");
+                    b.HasKey("BookId");
 
                     b.HasIndex("ProjectId");
 
                     b.ToTable("Books");
+                });
+
+            modelBuilder.Entity("Statistics.Models.Chapter", b =>
+                {
+                    b.Property<int>("ChapterId")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<int?>("BookId");
+
+                    b.Property<int>("ChapterEndPage");
+
+                    b.Property<string>("ChapterName");
+
+                    b.Property<int>("ChapterStartPage");
+
+                    b.HasKey("ChapterId");
+
+                    b.HasIndex("BookId");
+
+                    b.ToTable("Chapters");
                 });
 
             modelBuilder.Entity("Statistics.Models.Project", b =>
@@ -60,6 +76,13 @@ namespace Statistics.Migrations
                     b.HasOne("Statistics.Models.Project")
                         .WithMany("Books")
                         .HasForeignKey("ProjectId");
+                });
+
+            modelBuilder.Entity("Statistics.Models.Chapter", b =>
+                {
+                    b.HasOne("Statistics.Models.Book")
+                        .WithMany("Chapters")
+                        .HasForeignKey("BookId");
                 });
         }
     }

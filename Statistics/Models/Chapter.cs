@@ -10,7 +10,7 @@ namespace Statistics.Models
     [Table("Chapters")]
     public class Chapter
     {
-        [Key, DatabaseGenerated(DatabaseGeneratedOption.Computed)]
+        [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ChapterId { get; set; }
 
         public string ChapterName { get; set; }

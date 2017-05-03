@@ -19,13 +19,13 @@ namespace Statistics.Models.Concrete
 
         public void SaveBook(Book book)
         {
-            if (book.Id == 0)
+            if (book.BookId == 0)
             {
                 context.Books.Add(book);
             }
             else
             {
-                Book dbEntry = context.Books.FirstOrDefault(b => b.Id == book.Id);
+                Book dbEntry = context.Books.FirstOrDefault(b => b.BookId == book.BookId);
 
                 if (dbEntry != null)
                 {
