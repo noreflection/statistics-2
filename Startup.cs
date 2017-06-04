@@ -9,6 +9,13 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 
+using Microsoft.EntityFrameworkCore;
+
+
+using Statistics.Models;
+using Statistics.Models.Abstract;
+using Statistics.Models.Concrete;
+
 namespace WebApplicationBasic
 {
     public class Startup
@@ -28,6 +35,12 @@ namespace WebApplicationBasic
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            //ef
+            services.AddDbContext<ApplicationDbContext>(options => 
+                options.UseSqlServer(Configuration["Data:Statistics:ConnectionString"]));
+            services.AddTransient<IBookRepository, BookRepository>();
+
+
             // Add framework services.
             services.AddMvc();
         }
@@ -41,7 +54,8 @@ namespace WebApplicationBasic
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-                app.UseWebpackDevMiddleware(new WebpackDevMiddlewareOptions {
+                app.UseWebpackDevMiddleware(new WebpackDevMiddlewareOptions
+                {
                     HotModuleReplacement = true,
                     ReactHotModuleReplacement = true
                 });
