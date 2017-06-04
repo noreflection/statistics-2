@@ -4,11 +4,22 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 
+using Statistics.Models;
+using Statistics.Models.Abstract;
+
 namespace WebApplicationBasic.Controllers
 {
     [Route("api/[controller]")]
     public class SampleDataController : Controller
     {
+        private ISampleDataController repository;
+
+        public SampleDataController(ISampleDataController repository)
+        {
+            this.repository = repository;
+        }
+
+
         private static string[] Summaries = new[]
         {
             "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
@@ -39,6 +50,16 @@ namespace WebApplicationBasic.Controllers
                     return 32 + (int)(TemperatureC / 0.5556);
                 }
             }
+        }
+
+        [HttpGet("[action]")]
+        public IEnumerable<Book> GetBooks()
+        {
+            //IEnumerable<Chapter> ien = new IEnumerable<Chapter>(){};         
+            //var temp =  new Enumerable<T>;
+            var books = new List<Book>();
+
+            return repository.Books;
         }
     }
 }
