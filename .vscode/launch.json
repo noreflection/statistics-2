@@ -24,9 +24,9 @@
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
-            "program": "${workspaceRoot}\\Statistics\\bin\\Debug\\netcoreapp1.0\\Statistics.dll",
+            "program": "${workspaceRoot}\\bin\\Debug\\netcoreapp1.1\\Statistics.dll",
             "args": [],
-            "cwd": "${workspaceRoot}\\Statistics",
+            "cwd": "${workspaceRoot}",
             "stopAtEntry": false,
             "launchBrowser": {
                 "enabled": true,
