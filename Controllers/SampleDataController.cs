@@ -12,9 +12,9 @@ namespace WebApplicationBasic.Controllers
     [Route("api/[controller]")]
     public class SampleDataController : Controller
     {
-        private ISampleDataController repository;
+        private IBookRepository repository;
 
-        public SampleDataController(ISampleDataController repository)
+        public SampleDataController(IBookRepository repository)
         {
             this.repository = repository;
         }
@@ -58,8 +58,8 @@ namespace WebApplicationBasic.Controllers
             //IEnumerable<Chapter> ien = new IEnumerable<Chapter>(){};         
             //var temp =  new Enumerable<T>;
             var books = new List<Book>();
-
-            return repository.Books;
+            var b = repository.Books;
+            return b;
         }
     }
 }

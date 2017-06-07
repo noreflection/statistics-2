@@ -8,10 +8,20 @@
     "tasks": [
         {
             "taskName": "build",
-            "args": [ ],
+            "args": [],
             "isBuildCommand": true,
             "showOutput": "silent",
             "problemMatcher": "$msCompile"
-        }
+        }//,
+        // {
+        //     "taskName": "tsc",
+        //     "command": "Chrome",
+        //     "windows": {
+        //         "command": "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe --explicitly-allowed-ports=6000"
+        //     },
+        //     "args": [
+        //         "${file}"
+        //     ]
+        // }
     ]
 }
