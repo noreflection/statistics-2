@@ -6,8 +6,8 @@ interface GetBooksState {
 }
 interface Book {
     bookId: number,
-    bookname: string,
-    bookDescription: string
+    name: string,
+    description: string
 }
 
 export class GetBooks extends React.Component<{}, GetBooksState>{
@@ -41,8 +41,8 @@ export class GetBooks extends React.Component<{}, GetBooksState>{
                 {books.map(book =>
                     <tr key={book.bookId}>
                         <td>{book.bookId}</td>
-                        <td>{book.bookname}</td>
-                        <td>{book.bookDescription}</td>
+                        <td>{book.name}</td>
+                        <td>{book.description}</td>
                     </tr>
                 )}
             </tbody>
