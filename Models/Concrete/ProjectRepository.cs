@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace Statistics.Models.Concrete
 {
-    public class ProjectRepository : IProjectController
+    public class ProjectRepository : IProjectRepository
     {
         private ApplicationDbContext context { get; }
 

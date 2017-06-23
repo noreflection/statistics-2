@@ -18,6 +18,21 @@
     right: 0;
     z-index: 1;
 }
+/* Spinning React logo */
+.app-logo {
+  animation: app-logo-spin infinite 100s linear;
+  height: 50px;
+}
+
+.navbar-brand{
+    font-family:Courier New, Courier, monospace;
+    font-size: 25px
+}
+
+@keyframes app-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
 
 @media (max-width: 767px) {
     /* On small screens, the nav menu spans the full width of the screen. Leave a space for it. */

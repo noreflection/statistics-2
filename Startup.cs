@@ -39,6 +39,7 @@ namespace WebApplicationBasic
             services.AddDbContext<ApplicationDbContext>(options => 
                 options.UseSqlServer(Configuration["Data:Statistics:ConnectionString"]));
             services.AddTransient<IBookRepository, BookRepository>();
+            services.AddTransient<IProjectRepository, ProjectRepository>();
 
 
             // Add framework services.

@@ -53,7 +53,7 @@ namespace WebApplicationBasic.Controllers
         }
 
         [HttpGet("[action]")]
-        public IEnumerable<Book> GetBooks()=> repository.Books;
-        
+        public IEnumerable<Book> GetBooks() => repository.Books;
+
     }
 }

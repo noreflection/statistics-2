@@ -1,4 +1,5 @@
 import * as React from 'react';
+const logo = require('./resources/logo.svg') as string;
 import { Link, NavLink } from 'react-router-dom';
 
 export class NavMenu extends React.Component<{}, {}> {
@@ -12,7 +13,8 @@ export class NavMenu extends React.Component<{}, {}> {
                         <span className='icon-bar'></span>
                         <span className='icon-bar'></span>
                     </button>
-                    <Link className='navbar-brand' to={'/'}>WebApplicationBasic</Link>
+                    <img src={logo} className="app-logo" alt="logo" />
+                    <Link className='navbar-brand' to={'/'}>Statistics</Link>
                 </div>
                 <div className='clearfix'></div>
                 <div className='navbar-collapse collapse'>

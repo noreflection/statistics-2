@@ -2,7 +2,7 @@
 
 namespace Statistics.Models
 {
-    public interface IProjectController
+    public interface IProjectRepository
     {
         IEnumerable<Project> Projects { get; }
 
