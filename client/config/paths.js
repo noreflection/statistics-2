@@ -54,7 +54,7 @@ module.exports = {
   
   //JS
   appHtml: resolveApp('public/indexJS.html'),
-  appIndexJs: resolveApp('src/App/App.js'),
+  appIndexJs: resolveApp('src/App/App.jsx'),
 
   appPackageJson: resolveApp('package.json'),
   appSrc: resolveApp('src'),

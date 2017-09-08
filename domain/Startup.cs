@@ -21,7 +21,7 @@ namespace domain
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-            var connection = @"Server=DESKTOP-P8NR8S7\SQLEXPRESS;Database=ApplicationDatabase;Trusted_Connection=True;";
+            var connection = @"Server=(localdb)\MSSQLLocalDB;Database=ApplicationDatabase;Trusted_Connection=True;";
             services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(connection));
             services.AddTransient<IAuthorRepository, AuthorRepository>();
         }

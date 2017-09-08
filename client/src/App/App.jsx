@@ -1,9 +1,10 @@
 import React from 'react';
 import { render } from 'react-dom';
-import { Button, Header, Icon, Modal, Input, Label, Menu, Table } from 'semantic-ui-react';
+import { Button, Header, Icon, Modal, Input, Label, Table } from 'semantic-ui-react';
 import 'semantic-ui-css/semantic.min.css';
 
 import AuthorsTable from './AuthorsTable';
+import MenuExampleInvertedVertical from './MenuExampleInvertedVertical';
 
 class App extends React.Component {
     constructor() {
@@ -49,7 +50,8 @@ class App extends React.Component {
             ? <p><em></em></p>
             : this.renderAuthorsTable();
 
-        return (
+        return (<div>
+        <MenuExampleInvertedVertical />
             <Modal
                 trigger={
                     <div><br />
@@ -76,7 +78,7 @@ class App extends React.Component {
                         <Icon name='checkmark' /> Got it
                     </Button>
                 </Modal.Actions>
-            </Modal>
+            </Modal></div>
             // <div>
             //     <p>
             //         Author Name: <input
@@ -98,7 +100,6 @@ class App extends React.Component {
             // </div>
         );
     }
-
     renderAuthorsTable() {
         return <table className='table'>
             <thead>
