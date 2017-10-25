@@ -6,6 +6,7 @@
     "marked": "^0.3.6",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
+    "react-router-dom": "^4.2.2",
     "semantic-ui-css": "^2.2.11",
     "semantic-ui-react": "^0.71.1"
   },

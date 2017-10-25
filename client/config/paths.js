@@ -45,16 +45,16 @@ module.exports = {
   appPublic: resolveApp('public'),
 
   //Default
-  // appHtml: resolveApp('public/index.html'),
-  // appIndexJs: resolveApp('src/application/App.js'),
+  //appHtml: resolveApp('public/index.html'),
+  //appIndexJs: resolveApp('src/index.js'),
   
   //React
   // appHtml: resolveApp('public/indexReact.html'),
   // appIndexJs: resolveApp('src/React/indexReact.js'),
   
   //JS
-  appHtml: resolveApp('public/indexJS.html'),
-  appIndexJs: resolveApp('src/App/App.jsx'),
+  appHtml: resolveApp('public/index.html'),
+  appIndexJs: resolveApp('src/index.js'),
 
   appPackageJson: resolveApp('package.json'),
   appSrc: resolveApp('src'),
