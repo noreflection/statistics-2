@@ -30,7 +30,7 @@ export default class AuthorsTable extends Component {
         <Table celled>
           <Table.Header>
             <Table.Row>
-              <Table.HeaderCell>Authors ID</Table.HeaderCell>
+              <Table.HeaderCell >Authors ID</Table.HeaderCell>
               <Table.HeaderCell>Authors Name</Table.HeaderCell>
               <Table.HeaderCell>Books Count</Table.HeaderCell>
             </Table.Row>
@@ -57,6 +57,7 @@ export default class AuthorsTable extends Component {
             </Table.Row>
           </Table.Footer>
         </Table>
+
       </div>
     );
   }
