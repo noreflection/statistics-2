@@ -18,7 +18,7 @@ export default class AuthorsView extends Component {
             Introduction
           </Header>
           <p>
-            Semantic UI React is the official React integration for{" "}
+            Page with pagination{" "}
             <a href="#">Semantic UI</a> .
           </p>
           <List>

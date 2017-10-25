@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
-import { Menu } from "semantic-ui-react";
+import { Menu, Divider } from "semantic-ui-react";
 
 export default class NavMenu extends Component {
   state = { activeItem: "home" };
@@ -14,17 +14,29 @@ export default class NavMenu extends Component {
       <Menu inverted vertical stackable fixed="left">
         <NavLink to="/home">
           <Menu.Item>
-            <img src="/recourses/logo.png" alt="" />
+            <img src="./recourses/logo.png" alt="" />
           </Menu.Item>
         </NavLink>
+        <Divider />
 
         <NavLink to="/home">
           <Menu.Item
             name="home"
             active={activeItem === "home"}
             onClick={this.handleItemClick}
-          />
+          >
+            <Menu.Header>Home</Menu.Header>
+          </Menu.Item>
         </NavLink>
+
+        <Divider />
+        {/* <NavLink to="/home">
+          <Menu.Item
+            name="home"
+            active={activeItem === "home"}
+            onClick={this.handleItemClick}
+          />
+        </NavLink> */}
 
         <NavLink to="/authors">
           <Menu.Item
