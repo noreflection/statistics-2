@@ -8,20 +8,8 @@ export default class Home extends Component {
         <Segment clearing textAlign="center">
           <Header as="h1" textAlign="center">
             Home
-            <Header.Subheader>Home page</Header.Subheader>
+            <Header.Subheader>Projects page</Header.Subheader>
           </Header>
-        </Segment>
-
-        <Segment padded>
-          <Header as="h2" dividing>
-            On the home page
-          </Header>
-          <p>Current</p>
-          <List>
-            <List.Item icon="uncheck" content="Make homepage database driven" />
-            <List.Item icon="uncheck" content="Add backend part for project items" />
-            <List.Item icon="uncheck" content="Get the idea how to place data in db properly for this type on entity relations" />
-          </List>
         </Segment>
 
         <Segment padded>
@@ -54,7 +42,6 @@ export default class Home extends Component {
           </Header>
           <p>Todo items list .</p>
           <List>
-            <List.Item icon="uncheck" content="Make homepage database driven" />
             <List.Item icon="uncheck" content="Add redux" />
             <List.Item icon="uncheck" content="Add styled-components" />
             <List.Item icon="uncheck" content="Implement pagination with a random data" />
