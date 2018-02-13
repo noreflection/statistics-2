@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import { Container, Segment, List, Header } from "semantic-ui-react";
+import React, { Component } from 'react';
+import { Container, Segment, List, Header } from 'semantic-ui-react';
 
 export default class Home extends Component {
   render() {
@@ -17,7 +17,7 @@ export default class Home extends Component {
             Introduction
           </Header>
           <p>
-            The list of the available pages on the  <a href="#">site</a> .
+            The list of the available pages on the <a href="/">site</a> .
           </p>
           <List>
             <List.Item icon="check" content="Authors page" />
@@ -27,11 +27,10 @@ export default class Home extends Component {
             <List.Item icon="uncheck" content="D3 statistics page" />
             <List.Item icon="uncheck" content="Calendar view page" />
             <List.Item icon="uncheck" content="Login page" />
-            
           </List>
 
           <p>
-            Changelog page is available on the{" "} changelog page.
+            Changelog page is available on the changelog page.
             {/* <Link to="/usage">Usage</Link> info section.  */}
           </p>
         </Segment>
@@ -44,9 +43,18 @@ export default class Home extends Component {
           <List>
             <List.Item icon="uncheck" content="Add redux" />
             <List.Item icon="uncheck" content="Add styled-components" />
-            <List.Item icon="uncheck" content="Implement pagination with a random data" />
-            <List.Item icon="uncheck" content="Make all data driven by db, no hardcoded data" />
-            <List.Item icon="uncheck" content="Make all workflow user and session based" />
+            <List.Item
+              icon="uncheck"
+              content="Implement pagination with a random data"
+            />
+            <List.Item
+              icon="uncheck"
+              content="Make all data driven by db, no hardcoded data"
+            />
+            <List.Item
+              icon="uncheck"
+              content="Make all workflow user and session based"
+            />
             <List.Item icon="uncheck" content="Add JWT authorisation" />
           </List>
         </Segment>

@@ -1,7 +1,7 @@
-import React, { Component } from "react";
-import { Route } from "react-router-dom";
-import HomeView from "./views/home/HomeView";
-import AuthorsView from "./views/authors/AuthorsView";
+import React, { Component } from 'react';
+import { Route } from 'react-router-dom';
+import HomeView from './views/home/HomeView';
+import AuthorsView from './views/authors/AuthorsView';
 
 export default class WindowContainer extends Component {
   render() {

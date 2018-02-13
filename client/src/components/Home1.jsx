@@ -1,19 +1,19 @@
-import React from "react";
-import { render } from "react-dom";
-import { Button, Header, Icon, Modal, Input } from "semantic-ui-react";
-import "semantic-ui-css/semantic.min.css";
+import React from 'react';
+import { render } from 'react-dom';
+import { Button, Header, Icon, Modal, Input } from 'semantic-ui-react';
+import 'semantic-ui-css/semantic.min.css';
 
-import AuthorsTable from "./AuthorsTable";
-import MenuExampleInvertedVertical from "./MenuExampleInvertedVertical";
+import AuthorsTable from './AuthorsTable';
+import MenuExampleInvertedVertical from './MenuExampleInvertedVertical';
 
 class App extends React.Component {
   constructor() {
     super();
     this.state = {
       authors: [],
-      value: "",
+      value: '',
       loading: true,
-      modalWindowMessage: ""
+      modalWindowMessage: ''
     };
 
     //this.getAuthors = this.getAuthors.bind(this);
@@ -26,7 +26,7 @@ class App extends React.Component {
 
   componentDidMount() {
     this.getAuthors();
-    console.log("comstate",this.state);
+    console.log('comstate', this.state);
   }
 
   handleOpen = e =>
@@ -37,13 +37,13 @@ class App extends React.Component {
   handleAddAuthor = e =>
     this.setState({
       modalOpen: true,
-      modalWindowMessage: "Author has been succesfully added"
+      modalWindowMessage: 'Author has been succesfully added'
     });
 
   handleDeleteAuthor = e =>
     this.setState({
       modalOpen: true,
-      modalWindowMessage: "Author has been succesfully deleted"
+      modalWindowMessage: 'Author has been succesfully deleted'
     });
 
   handleClose = e =>
@@ -143,38 +143,38 @@ class App extends React.Component {
   }
 
   deleteAuthor(name) {
-    fetch("http://localhost:5001/api/test", {
+    fetch('http://localhost:5001/api/test', {
       headers: {
-        "Content-Type": "application/json"
+        'Content-Type': 'application/json'
       },
-      method: "DELETE",
+      method: 'DELETE',
       body: JSON.stringify({ authorId: 90, booksCount: 2 })
     });
   }
 
   async getAuthors() {
-    await fetch("http://localhost:5001/api/test")
+    await fetch('http://localhost:5001/api/test')
       .then(response => response.json())
       .then(data => {
-        console.log("data", data);
+        console.log('data', data);
         this.setState({ authors: data, loading: false });
-        console.log("state", this.state);
+        console.log('state', this.state);
       });
   }
 
   addRandomAuthor() {
-    fetch("http://localhost:5001/api/test", {
+    fetch('http://localhost:5001/api/test', {
       headers: {
-        "Content-Type": "application/json"
+        'Content-Type': 'application/json'
       },
-      method: "POST",
+      method: 'POST',
       body: JSON.stringify({ authorName: this.state.value, booksCount: 2 })
     });
 
     function makeAuthorId() {
-      var text = "";
+      var text = '';
       var possible =
-        "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+        'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
 
       for (var i = 0; i < 5; i++)
         text += possible.charAt(Math.floor(Math.random() * possible.length));
@@ -184,4 +184,4 @@ class App extends React.Component {
 }
 export default AuthorsTable;
 
-render(<App />, document.getElementById("root"));
+render(<App />, document.getElementById('root'));

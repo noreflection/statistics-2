@@ -21,12 +21,14 @@ export default class Home extends Component {
             <List.Item icon="uncheck" content="Make homepage database driven" />
             <List.Item icon="uncheck" content="Add backend part for project items" />
             <List.Item icon="uncheck" content="Get the idea how to place data in db properly for this type on entity relations" />
+            <List.Item icon="uncheck" content="Show on homepage github commits status" />
+            <List.Item icon="uncheck" content="Incorporate several Elm pages" />
           </List>
         </Segment>
 
         <Segment padded>
           <Header as="h2" dividing>
-            Introduction
+            Map
           </Header>
           <p>
             The list of the available pages on the  <a href="#">site</a> .

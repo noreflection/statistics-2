@@ -1,7 +1,7 @@
-import React, { Component } from "react";
-import { Container, Segment, List, Header } from "semantic-ui-react";
+import React, { Component } from 'react';
+import { Container, Segment, List, Header } from 'semantic-ui-react';
 //import { Menu } from 'semantic-ui-react'
-import AuthorsTable from "./AuthorsTable";
+import AuthorsTable from './AuthorsTable';
 export default class AuthorsView extends Component {
   render() {
     return (
@@ -18,8 +18,7 @@ export default class AuthorsView extends Component {
             Introduction
           </Header>
           <p>
-            Page with pagination{" "}
-            <a href="#">Semantic UI</a> .
+            Page with pagination <a href="/">Semantic UI</a> .
           </p>
           <List>
             <List.Item icon="check" content="jQuery Free" />
@@ -30,7 +29,7 @@ export default class AuthorsView extends Component {
             <List.Item icon="check" content="Auto Controlled State" />
           </List>
           <p>
-            Installation instructions are provided in the{" "}
+            Installation instructions are provided in the{' '}
             {/* <Link to="/usage">Usage</Link> section. */}
           </p>
 

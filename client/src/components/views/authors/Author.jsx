@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import { Table } from "semantic-ui-react";
+import React, { Component } from 'react';
+import { Table } from 'semantic-ui-react';
 export default class Author extends Component {
   render() {
     return (
