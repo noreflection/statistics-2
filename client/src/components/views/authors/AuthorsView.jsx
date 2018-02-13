@@ -38,4 +38,14 @@ export default class AuthorsView extends Component {
       </Container>
     );
   }
+
+  async fetchAuthors() {
+    await fetch('http://localhost:5001/api/test')
+      .then(response => response.json())
+      .then(data => {
+        console.log('data', data);
+        this.setState({ authors: data, loading: false });
+        console.log('state', this.state);
+      });
+  }
 }

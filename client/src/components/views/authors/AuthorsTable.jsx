@@ -1,7 +1,12 @@
 import React, { Component } from 'react';
 import { Icon, Menu, Table } from 'semantic-ui-react';
 import Author from './Author';
+import authorsStore from './AuthorsStore';
 
+import { inject, observer } from 'mobx-react';
+
+@inject('authorsStore')
+@observer
 export default class AuthorsTable extends Component {
   constructor() {
     super();
@@ -20,7 +25,15 @@ export default class AuthorsTable extends Component {
       ]
     };
   }
+
+  componentDidMount() {
+    //this.fetchAuthors();
+    this.props.authorsStore.fetchAuthors();
+    console.log(11, this.props.authorsStore.authors);
+  }
+
   render() {
+    const store = this.props.authorsStore;
     return (
       <div>
         <Table celled>
@@ -33,12 +46,12 @@ export default class AuthorsTable extends Component {
           </Table.Header>
 
           <Table.Body>
-            {this.state.authors.map(author => {
+            {store.authors.map(author => {
               return (
                 <Author
-                  id={author.id}
-                  name={author.name}
-                  count={author.count}
+                  id={author.authorId}
+                  name={author.authorName}
+                  count={author.booksCount}
                 />
               );
             })}
@@ -65,5 +78,15 @@ export default class AuthorsTable extends Component {
         </Table>
       </div>
     );
+  }
+
+  async fetchAuthors() {
+    await fetch('http://localhost:5001/api/test')
+      .then(response => response.json())
+      .then(data => {
+        console.log('data', data);
+        this.setState({ authors: data, loading: false });
+        console.log('state', this.state);
+      });
   }
 }
